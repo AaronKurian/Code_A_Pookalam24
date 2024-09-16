@@ -123,7 +123,83 @@ def tripatt(len,clr):
 
 s.speed(0)
 
+######
+def draw_rectangle(x, y, width, height, color, angle=0):
+    s.penup()
+    s.speed(0)
+    s.goto(x, y)  # Go to starting position (x, y)
+    s.setheading(angle)  # Set the angle of the turtle
+    s.pendown()  # Start drawing
+    s.fillcolor(color)  # Set the fill color
+    s.begin_fill()  # Begin filling the shape
 
+    # Draw top side
+    s.left(90)
+    s.forward(height)
+    s.left(90)
+    
+    # Draw right side
+    s.forward(width)
+    s.left(90)
+    
+    # Draw the second top side
+    s.forward(height)
+    #s.left(90)
+    
+    # Draw left side and lift pen to leave bottom invisible
+    #s.forward(height)
+    
+    #s.end_fill()  # End filling the shape
+    s.speed(0)
+    s.pensize(3)
+# Set turtle speed and pensize for clarity
+
+
+''' s.fillcolor(color)
+    s.begin_fill()
+    for _ in range(2):
+        s.forward(width)
+        s.left(90)
+        s.forward(height)
+        s.left(90)
+    s.end_fill()'''
+
+def draw_polygon(points, color):
+    s.penup()
+    s.goto(points[0])
+    s.pendown()
+    s.fillcolor(color)
+    s.begin_fill()
+    for point in points[1:]:
+        s.goto(point)
+    s.goto(points[0])
+    s.end_fill()
+
+def mec():
+    # Create the turtle object
+    global s
+    s = turtle.Turtle()
+    s.speed(0)  # Set the fastest drawing speed
+
+    # Draw the rectangles (representing the bars)
+    for i in range(3):
+        draw_rectangle(9, -20 + i * 10, 30, 10, "#f7b267")
+        draw_rectangle(31, -20 + i * 10, 25, 10, "#ffdab9", angle=15)
+        draw_rectangle(-23, -15 + i * 10, 25, 10, "#ffdab9", angle=-15)
+
+    # Draw the first polygon (trapezoid-like shape)
+    points1 = [(-3, 10), (30, 10), (20, 17), (5, 17)]
+    draw_polygon(points1, "#f7b267")
+
+    # Draw the second polygon (smaller trapezoid-like shape)
+    '''points2 = [(0, 17), (25, 17), (29, 22), (3, 22)]
+    draw_polygon(points2, "tomato")'''
+
+    # Finish the drawing
+    turtle.done()
+
+
+#####
 
 def draw_circle_with_colored_divisions(radius, divisions, color1, color2):
     s = turtle.Turtle()
@@ -176,7 +252,7 @@ draw_simple_circle(370, "#9D0208", "#9D0208")
 
 #square1(130,'#03071e')
 
-
+'''
 tripatt(360,"#DC2F02")
 tripatt(327, "#E85D04")
 tripatt(295,"#FAA307")
@@ -190,8 +266,11 @@ draw_simple_circle(167, "white", "#fff9ec")
 draw_simple_circle(140, "black", "#2b2d42")
 draw_circle_with_colored_divisions(138, 8, '#610b01', '#002107')
 draw_circle_with_colored_divisions(118, 8, '#E85D04', '#01330c')
+'''
 draw_simple_circle(98, "yellow", "yellow")
 draw_simple_circle(78, "white", "white")
 
+# Run the mec() function
+mec()
 
 turtle.Screen().exitonclick()
