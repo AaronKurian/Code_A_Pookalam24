@@ -124,13 +124,16 @@ def tripatt(len,clr):
 s.speed(0)
 
 ######
-def draw_rectangle(x, y, width, height, color, angle=0):
+def draw_rectangle1(x, y, width, height, color1,color2, angle=0):
+    s.speed(0)
+    s.pencolor(color1)
+    s.pensize(3)
     s.penup()
     s.speed(0)
     s.goto(x, y)  # Go to starting position (x, y)
     s.setheading(angle)  # Set the angle of the turtle
     s.pendown()  # Start drawing
-    s.fillcolor(color)  # Set the fill color
+    s.fillcolor(color2)  # Set the fill color
     s.begin_fill()  # Begin filling the shape
 
     # Draw top side
@@ -149,10 +152,60 @@ def draw_rectangle(x, y, width, height, color, angle=0):
     # Draw left side and lift pen to leave bottom invisible
     #s.forward(height)
     
-    #s.end_fill()  # End filling the shape
-    s.speed(0)
-    s.pensize(3)
+    s.end_fill()  # End filling the shape
+   
 # Set turtle speed and pensize for clarity
+
+def draw_rectangle2(x, y, width, height, color1,color2, angle=0):
+    s.speed(0)
+    s.pencolor(color1)
+    s.pensize(3)
+    s.penup()
+    s.speed(0)
+    s.goto(x, y)  # Go to starting position (x, y)
+    s.setheading(angle)  # Set the angle of the turtle
+    s.pendown()  # Start drawing
+    s.fillcolor(color2)  # Set the fill color
+    s.begin_fill()  # Begin filling the shape
+
+    # Draw top side
+    s.left(90)
+    s.forward(2)
+    s.left(90)
+    
+    # Draw right side
+    s.forward(width)
+    s.left(90)
+    
+    # Draw the second top side
+    s.forward(height)
+   
+    s.end_fill()
+
+def draw_rectangle3(x, y, width, height, color1,color2, angle=0):
+    s.speed(0)
+    s.pencolor(color1)
+    s.pensize(3)
+    s.penup()
+    s.goto(x, y)  # Go to starting position (x, y)
+    s.setheading(angle)  # Set the angle of the turtle
+    s.pendown()  # Start drawing
+    s.fillcolor(color2)  # Set the fill color
+    s.begin_fill()  # Begin filling the shape
+
+    # Draw top side
+    s.left(90)
+    s.forward(height)
+    s.left(90)
+    
+    # Draw right side
+    s.forward(width)
+    s.left(105)
+   
+    # Draw the second top side
+    s.forward(2)
+    #s.left(90)
+    s.end_fill()
 
 
 ''' s.fillcolor(color)
@@ -164,11 +217,12 @@ def draw_rectangle(x, y, width, height, color, angle=0):
         s.left(90)
     s.end_fill()'''
 
-def draw_polygon(points, color):
+def draw_polygon(points, color1,color2):
     s.penup()
+    s.pencolor(color1)
     s.goto(points[0])
     s.pendown()
-    s.fillcolor(color)
+    s.fillcolor(color2)
     s.begin_fill()
     for point in points[1:]:
         s.goto(point)
@@ -183,20 +237,21 @@ def mec():
 
     # Draw the rectangles (representing the bars)
     for i in range(3):
-        draw_rectangle(9, -20 + i * 10, 30, 10, "#f7b267")
-        draw_rectangle(31, -20 + i * 10, 25, 10, "#ffdab9", angle=15)
-        draw_rectangle(-23, -15 + i * 10, 25, 10, "#ffdab9", angle=-15)
+        draw_rectangle1(15, -20 + i * 10, 30, 10, "#f7b267","#ffdab9")
+        draw_rectangle2(40, -5 + i * 10, 25, 10, "#f7b267","#ffdab9", angle=15)
+        draw_rectangle3(-17, -20 + i * 10, 25, 10, "#f7b267","#ffdab9", angle=-15)
 
     # Draw the first polygon (trapezoid-like shape)
-    points1 = [(-3, 10), (30, 10), (20, 17), (5, 17)]
-    draw_polygon(points1, "#f7b267")
+
+    points1 = [(-18, 14), (15, 14), (8, 22), (-8, 22)]
+    draw_polygon(points1, "#f7b267","#ffdab9")
 
     # Draw the second polygon (smaller trapezoid-like shape)
     '''points2 = [(0, 17), (25, 17), (29, 22), (3, 22)]
     draw_polygon(points2, "tomato")'''
 
     # Finish the drawing
-    turtle.done()
+   # turtle.done()
 
 
 #####
