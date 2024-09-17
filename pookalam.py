@@ -3,6 +3,42 @@ from turtle import *
 import math
 s = turtle.Turtle()
 
+#happy onam
+penup()
+goto(-700,320)
+pendown()
+color("red")
+write("Happy Onam!",font=("Times New Roman",50,"bold"))
+
+#submitted by
+color("#6c55ed")
+penup()
+goto(350,-300)
+pendown()
+color("#03071e")
+write("- Aaron Kurian Abraham",font=("Times New Roman",20)) #"italic"))
+penup()
+goto(350,-350)
+pendown()
+write("- CS3A",font=("Times New Roman",20))#, "italic"))
+
+
+
+def designline():
+    s.penup()
+    s.shapesize(stretch_wid=0.75, outline=None)  # Adjust size here (e.g., 2 times the default size)
+    # Circular ring pattern - on outside circle
+    s.goto(-700,305)
+    s.shape("circle")
+    s.pendown()
+    for i in range(42):
+        
+        s.color(["#D80A0A","#B81A19"][i%2])
+        s.stamp()
+        s.forward(10)
+    s.penup()
+    s.goto(0,0)
+designline()
 
 
 def draw_simple_circle(radius, color, fill_color):
@@ -237,14 +273,14 @@ def mec():
 
     # Draw the rectangles (representing the bars)
     for i in range(3):
-        draw_rectangle1(15, -20 + i * 10, 30, 10, "#c18c5d","#db7c26")
-        draw_rectangle2(40, -5 + i * 10, 25, 10, "#c18c5d","#db7c26", angle=15)
-        draw_rectangle3(-17, -20 + i * 10, 25, 10, "#c18c5d","#db7c26", angle=-15)
+        draw_rectangle1(15, -20 + i * 10, 30, 10, "#8d6b48","#e8c9ab")
+        draw_rectangle2(40, -5 + i * 10, 25, 10, "#8d6b48","#e8c9ab", angle=15)
+        draw_rectangle3(-17, -20 + i * 10, 25, 10, "#8d6b48","#e8c9ab", angle=-15)
 
     # Draw the first polygon (trapezoid-like shape)
 
     points1 = [(-18, 14), (15, 14), (8, 22), (-8, 22)]
-    draw_polygon(points1, "#c18c5d","#db7c26")
+    draw_polygon(points1, "#8d6b48","#e8c9ab")
 
     # Draw the second polygon (smaller trapezoid-like shape)
     '''points2 = [(0, 17), (25, 17), (29, 22), (3, 22)]
@@ -328,13 +364,30 @@ def draw_circle_with_colored_divisions1(radius, divisions, colors):
 
 # Set up parameters
 
-divisions = 24
+
 colors = ['#ffffff', '#ffba08', '#f48c06', '#dc2f02', '#d00000', '#9d0208']  # 6 different colors
 
 
 
-draw_simple_circle(410, "black", "#370617")
-draw_simple_circle(390, "#6A040F", "#6A040F")
+def design():
+    
+    # Circular ring pattern - on outside circle
+    s.goto(0,-392)
+    s.shapesize(stretch_wid=1, outline=None)
+    s.shape("circle")
+    for i in range(190):
+        s.circle(393,360/190)
+        s.color(["#008000","#ffea00"][i%2])
+        s.stamp()
+    s.goto(0,0)
+
+design()
+
+
+
+#draw_simple_circle(413, "#008000", "#008000")
+#draw_simple_circle(398, "#ffea00", "#ffea00")
+draw_simple_circle(385, "#6A040F", "#6A040F")
 draw_simple_circle(370, "#9D0208", "#9D0208")
 #drawCircle('black','red', 290)
 #square1(270,'#DC2F02')
@@ -347,7 +400,7 @@ draw_simple_circle(370, "#9D0208", "#9D0208")
 
 #square1(130,'#03071e')
 
-'''
+
 tripatt(360,"#DC2F02")
 tripatt(327, "#E85D04")
 tripatt(295,"#FAA307")
@@ -361,7 +414,7 @@ draw_simple_circle(167, "white", "#fff9ec")
 draw_simple_circle(140, "black", "#2b2d42")
 draw_circle_with_colored_divisions(138, 8, '#610b01', '#002107')
 draw_circle_with_colored_divisions(118, 8, '#E85D04', '#01330c')
-'''
+
 draw_simple_circle(98, "yellow", "yellow")
 draw_simple_circle(78, "white", "white")
 
@@ -372,6 +425,8 @@ draw_circle_with_colored_divisions1(60, 24, colors)
 colors = ['#f48c06', '#dc2f02', '#d00000', '#9d0208','#ffffff','#ffba08' ]  # 6 different colors
 draw_circle_with_colored_divisions1(50, 24, colors)
 draw_simple_circle(40, "white", "white")
+colors = ['#38b000', '#70e000']# '#dc2f02', '#d00000', '#9d0208']  # 6 different colors
+draw_circle_with_colored_divisions1(40, 12, colors)
 # Run the mec() function
 mec()
 
