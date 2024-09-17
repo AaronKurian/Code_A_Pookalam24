@@ -237,14 +237,14 @@ def mec():
 
     # Draw the rectangles (representing the bars)
     for i in range(3):
-        draw_rectangle1(15, -20 + i * 10, 30, 10, "#f7b267","#ffdab9")
-        draw_rectangle2(40, -5 + i * 10, 25, 10, "#f7b267","#ffdab9", angle=15)
-        draw_rectangle3(-17, -20 + i * 10, 25, 10, "#f7b267","#ffdab9", angle=-15)
+        draw_rectangle1(15, -20 + i * 10, 30, 10, "#c18c5d","#db7c26")
+        draw_rectangle2(40, -5 + i * 10, 25, 10, "#c18c5d","#db7c26", angle=15)
+        draw_rectangle3(-17, -20 + i * 10, 25, 10, "#c18c5d","#db7c26", angle=-15)
 
     # Draw the first polygon (trapezoid-like shape)
 
     points1 = [(-18, 14), (15, 14), (8, 22), (-8, 22)]
-    draw_polygon(points1, "#f7b267","#ffdab9")
+    draw_polygon(points1, "#c18c5d","#db7c26")
 
     # Draw the second polygon (smaller trapezoid-like shape)
     '''points2 = [(0, 17), (25, 17), (29, 22), (3, 22)]
@@ -293,6 +293,46 @@ def draw_circle_with_colored_divisions(radius, divisions, color1, color2):
         s.end_fill()
 
 
+def draw_circle_with_colored_divisions1(radius, divisions, colors):
+    s = turtle.Turtle()
+    s.speed(0)  # Fastest drawing speed
+
+    # Draw the circle outline
+    s.penup()
+    s.goto(0, -radius)  # Move the turtle to the starting point of the circle
+    s.pendown()
+    s.circle(radius)
+
+    # Draw and color the divisions
+    angle = 360 / divisions  # Angle between each division line
+    for i in range(divisions):
+        s.penup()
+        s.goto(0, 0)  # Move the turtle to the center of the circle
+        s.pendown()
+        
+        # Set the fill color from the list of 6 colors
+        s.color(colors[i % len(colors)])
+        
+        s.begin_fill()
+        
+        # Draw the sector
+        s.setheading(90)  # Point the turtle upwards
+        s.right(angle * i)  # Rotate the turtle to the correct angle
+        s.forward(radius)  # Draw the line to the circumference
+        s.left(90)  # Turn left to face the circle edge
+        s.circle(radius, angle)  # Draw the arc of the sector
+        s.left(90)  # Turn left to return to the center
+        s.forward(radius)  # Complete the triangle to the center
+        
+        s.end_fill()
+
+# Set up parameters
+
+divisions = 24
+colors = ['#ffffff', '#ffba08', '#f48c06', '#dc2f02', '#d00000', '#9d0208']  # 6 different colors
+
+
+
 draw_simple_circle(410, "black", "#370617")
 draw_simple_circle(390, "#6A040F", "#6A040F")
 draw_simple_circle(370, "#9D0208", "#9D0208")
@@ -325,6 +365,13 @@ draw_circle_with_colored_divisions(118, 8, '#E85D04', '#01330c')
 draw_simple_circle(98, "yellow", "yellow")
 draw_simple_circle(78, "white", "white")
 
+
+draw_circle_with_colored_divisions1(70, 24, colors)
+colors = ['#ffba08', '#f48c06', '#dc2f02', '#d00000', '#9d0208','#ffffff']  # 6 different colors
+draw_circle_with_colored_divisions1(60, 24, colors)
+colors = ['#f48c06', '#dc2f02', '#d00000', '#9d0208','#ffffff','#ffba08' ]  # 6 different colors
+draw_circle_with_colored_divisions1(50, 24, colors)
+draw_simple_circle(40, "white", "white")
 # Run the mec() function
 mec()
 
