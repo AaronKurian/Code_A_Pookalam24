@@ -11,6 +11,7 @@ goto(-700,320)
 pendown()
 color("red")
 write("Happy Onam!",font=("Times New Roman",50,"bold"))
+hideturtle()
 
 #submitted by
 speed(0)
@@ -23,10 +24,12 @@ penup()
 goto(350,-350)
 pendown()
 write("- CS3A",font=("Times New Roman",20))#, "italic"))
+hideturtle()
 
 
 
 def designline():
+    s.hideturtle()
     s.speed(0)
     s.penup()
     s.shapesize(stretch_wid=0.75, outline=None)  # Adjust size 
@@ -41,6 +44,7 @@ def designline():
     s.goto(0,0)
 
 def design():
+    s.hideturtle()
     s.speed(0)
     s.goto(0,-392)
     s.shapesize(stretch_wid=1, outline=None)
@@ -54,6 +58,7 @@ def design():
 
 def circle(radius, color, fill_color):
     s = turtle.Turtle()
+    s.hideturtle()
     s.speed(0)
     s.penup()
     s.goto(0, -radius)  
@@ -66,6 +71,7 @@ def circle(radius, color, fill_color):
 
    
 def triangle(len,clr):
+    s.hideturtle()
     s.speed(0)
     s.color(clr)
     for i in range(36):
@@ -87,6 +93,7 @@ def triangle(len,clr):
 
 def rectangle1(x, y, width, height, color1,color2, angle=0):
     s = turtle.Turtle()
+    s.hideturtle()
     s.speed(0)
     s.pencolor(color1)
     s.pensize(3)
@@ -107,6 +114,7 @@ def rectangle1(x, y, width, height, color1,color2, angle=0):
 
 def rectangle2(x, y, width, height, color1,color2, angle=0):
     s = turtle.Turtle()
+    s.hideturtle()
     s.speed(0)
     s.pencolor(color1)
     s.pensize(3)
@@ -127,6 +135,7 @@ def rectangle2(x, y, width, height, color1,color2, angle=0):
 
 def rectangle3(x, y, width, height, color1,color2, angle=0):
     s = turtle.Turtle()
+    s.hideturtle()
     s.speed(0)
     s.pencolor(color1)
     s.pensize(3)
@@ -146,6 +155,7 @@ def rectangle3(x, y, width, height, color1,color2, angle=0):
 
 def trapeziumroof(points, color1,color2):
     s = turtle.Turtle()
+    s.hideturtle()
     s.speed(0)
     s.penup()
     s.pencolor(color1)
@@ -160,17 +170,19 @@ def trapeziumroof(points, color1,color2):
 
 def model():
     s = turtle.Turtle()
+    s.hideturtle()
     s.speed(0)
     for i in range(3):
         rectangle1(15, -20 + i * 10, 30, 10, "#8d6b48","#e8c9ab")
         rectangle2(40, -5 + i * 10, 25, 10, "#8d6b48","#e8c9ab", angle=15)
         rectangle3(-17, -20 + i * 10, 25, 10, "#8d6b48","#e8c9ab", angle=-15)
-    points1 = [(-18, 14), (15, 14), (8, 22), (-8, 22)]
+    points1 = [(-18, 14), (15, 14), (6, 22), (-8, 22)]
     trapeziumroof(points1, "#8d6b48","#e8c9ab")
 
 
 def circle_with_colored_divisions(radius, divisions, colors):
     s = turtle.Turtle()
+    s.hideturtle()
     s.speed(0) 
     s.penup()
     s.goto(0, -radius) 
@@ -220,9 +232,7 @@ colors = ['#ffba08', '#f48c06', '#dc2f02', '#d00000', '#9d0208','#ffffff']  # 6 
 circle_with_colored_divisions(60, 24, colors)
 colors = ['#f48c06', '#dc2f02', '#d00000', '#9d0208','#ffffff','#ffba08' ]  # 6 different colors
 circle_with_colored_divisions(50, 24, colors)
-circle(40, "white", "white")
 colors = ['#38b000', '#70e000']# 2 different colors
 circle_with_colored_divisions(40, 12, colors)
 model()
-s.hideturtle()
 turtle.Screen().exitonclick()
