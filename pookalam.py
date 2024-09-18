@@ -27,7 +27,6 @@ write("- CS3A",font=("Times New Roman",20))#, "italic"))
 hideturtle()
 
 
-
 def designline():
     s.hideturtle()
     s.speed(0)
@@ -42,6 +41,7 @@ def designline():
         s.forward(10)
     s.penup()
     s.goto(0,0)
+
 
 def design():
     s.hideturtle()
@@ -69,7 +69,32 @@ def circle(radius, color, fill_color):
     s.end_fill()
     s.speed(0)
 
-   
+
+def circle_with_colored_divisions(radius, divisions, colors):
+    s = turtle.Turtle()
+    s.hideturtle()
+    s.speed(0) 
+    s.penup()
+    s.goto(0, -radius) 
+    s.pendown()
+    s.circle(radius)
+    angle = 360 / divisions  
+    for i in range(divisions):
+        s.penup()
+        s.goto(0, 0) 
+        s.pendown()
+        s.color(colors[i % len(colors)])
+        s.begin_fill()
+        s.setheading(90) 
+        s.right(angle * i) 
+        s.forward(radius)  
+        s.left(90) 
+        s.circle(radius, angle)  
+        s.left(90)  
+        s.forward(radius) 
+        s.end_fill()
+
+
 def triangle(len,clr):
     s.hideturtle()
     s.speed(0)
@@ -87,8 +112,6 @@ def triangle(len,clr):
         s.left(10)
         s.speed(0)
     s.left(5)
-
-
 
 
 def rectangle1(x, y, width, height, color1,color2, angle=0):
@@ -159,6 +182,7 @@ def trapeziumroof(points, color1,color2):
     s.speed(0)
     s.penup()
     s.pencolor(color1)
+    s.pensize(3)
     s.goto(points[0])
     s.pendown()
     s.fillcolor(color2)
@@ -167,6 +191,7 @@ def trapeziumroof(points, color1,color2):
         s.goto(point)
     s.goto(points[0])
     s.end_fill()
+
 
 def model():
     s = turtle.Turtle()
@@ -179,30 +204,6 @@ def model():
     points1 = [(-18, 14), (15, 14), (6, 22), (-8, 22)]
     trapeziumroof(points1, "#8d6b48","#e8c9ab")
 
-
-def circle_with_colored_divisions(radius, divisions, colors):
-    s = turtle.Turtle()
-    s.hideturtle()
-    s.speed(0) 
-    s.penup()
-    s.goto(0, -radius) 
-    s.pendown()
-    s.circle(radius)
-    angle = 360 / divisions  
-    for i in range(divisions):
-        s.penup()
-        s.goto(0, 0) 
-        s.pendown()
-        s.color(colors[i % len(colors)])
-        s.begin_fill()
-        s.setheading(90) 
-        s.right(angle * i) 
-        s.forward(radius)  
-        s.left(90) 
-        s.circle(radius, angle)  
-        s.left(90)  
-        s.forward(radius) 
-        s.end_fill()
 
 ###CALLING ALL FUNCTIONS###
 
