@@ -4,26 +4,26 @@ import math
 
 s = turtle.Turtle()
 
-#happy onam
+#happy_onam
 speed(0)
 penup()
 goto(-700,320)
 pendown()
-color("red")
+color("#d00000")
 write("Happy Onam!",font=("Times New Roman",50,"bold"))
 hideturtle()
 
-#submitted by
+#name_and_class
 speed(0)
 penup()
 goto(350,-300)
 pendown()
 color("#03071e")
-write("- Aaron Kurian Abraham",font=("Times New Roman",20)) #"italic"))
+write("- Aaron Kurian Abraham",font=("Times New Roman",20))
 penup()
 goto(350,-350)
 pendown()
-write("- CS3A",font=("Times New Roman",20))#, "italic"))
+write("- CS3A",font=("Times New Roman",20))
 hideturtle()
 
 
@@ -233,7 +233,8 @@ colors = ['#ffba08', '#f48c06', '#dc2f02', '#d00000', '#9d0208','#ffffff']  # 6 
 circle_with_colored_divisions(60, 24, colors)
 colors = ['#f48c06', '#dc2f02', '#d00000', '#9d0208','#ffffff','#ffba08' ]  # 6 different colors
 circle_with_colored_divisions(50, 24, colors)
-colors = ['#38b000', '#70e000']# 2 different colors
+circle(44, "#004b23", "#004b23")
+colors = ['#25a244', '#2dc653']# 2 different colors
 circle_with_colored_divisions(40, 12, colors)
 model()
 turtle.Screen().exitonclick()
