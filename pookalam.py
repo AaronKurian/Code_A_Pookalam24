@@ -134,7 +134,7 @@ def rectangle1(x, y, width, height, color1, color2, angle=0):
     s.forward(height)
     s.end_fill()
 
-# Create a thinner rectangle with a specific color and rotation angle
+# Create a rectangle with a specific color and rotation angle
 def rectangle2(x, y, width, height, color1, color2, angle=0):
     s = turtle.Turtle()
     s.hideturtle()
@@ -155,7 +155,7 @@ def rectangle2(x, y, width, height, color1, color2, angle=0):
     s.forward(height)
     s.end_fill()
 
-# Create a rectangular section with a specific color and rotation angle
+# Create a rectangle with a specific color and rotation angle
 def rectangle3(x, y, width, height, color1, color2, angle=0):
     s = turtle.Turtle()
     s.hideturtle()
@@ -207,10 +207,14 @@ def model():
 
 
 ###Call all the drawing functions###
+
 designline()
+# Drawing border design
 design()
+# Drawing circles and patterns
 circle(385, "#6A040F", "#6A040F")
 circle(370, "#9D0208", "#9D0208")
+# Triangular patterns
 triangle(360, "#DC2F02")
 triangle(327, "#E85D04")
 triangle(295, "#FAA307")
@@ -219,6 +223,7 @@ triangle(245, "white")
 triangle(225, "#7D82B8")
 triangle(205, "#613F75")
 triangle(185, "#03071e")
+# Smaller circles with colored divisions
 circle(167, "white", "#fff9ec")
 circle(140, "black", "#2b2d42")
 colors = ['#610b01', '#002107']  # 2 different colors
@@ -236,6 +241,7 @@ circle_with_colored_divisions(50, 24, colors)
 circle(44, "#004b23", "#004b23")
 colors = ['#25a244', '#2dc653']  # 2 different colors
 circle_with_colored_divisions(40, 12, colors)
+# Building MEC at centre
 model()
-
+# Exit on click
 turtle.Screen().exitonclick()
