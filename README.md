@@ -53,10 +53,10 @@ python pookalam.py
 A Turtle graphics window will open, and the Pookalam design will be drawn automatically. You can click on the Turtle window to close it once the drawing is complete.
 
 ## Customization
-** Colors: Modify the color scheme by changing the color values in the Turtle function calls.
-** Shapes: You can modify the patterns by adjusting the size, shape, and number of circles or triangles.
-** Text: The "Happy Onam" message can be customized in terms of font size, style, and position.
-** Execution Speed: You can adjust the drawing speed by modifying the speed() function.
+- Colors: Modify the color scheme by changing the color values in the Turtle function calls.
+-  Shapes: You can modify the patterns by adjusting the size, shape, and number of circles or triangles.
+-  Text: The "Happy Onam" message can be customized in terms of font size, style, and position.
+-  Execution Speed: You can adjust the drawing speed by modifying the speed() function.
 
 ## Credits
 This project was created for the Code a Pookalam Contest by FOSS MEC. It was inspired by the traditional Pookalams designed during the Onam festival in Kerala.
