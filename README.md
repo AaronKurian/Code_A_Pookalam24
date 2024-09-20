@@ -31,5 +31,35 @@ The Pookalam is a key part of the Onam celebrations in Kerala. This project uses
 To get started, first clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/pookalam-turtle.git
-cd pookalam-turtle
+git clone https://github.com/AaronKurian/Pookalam24.git
+cd Pookalam24
+```
+### Install Requirements
+Make sure you have Python installed. If not, download it from Python.org.
+
+Then, install the required packages using the requirements.txt file:
+
+```bash
+pip install -r requirements.txt
+```
+Note: If the requirements.txt file lists the turtle module, you may skip installing it since it comes with Python by default.
+
+## How to Run
+After installation, you can run the program by executing the following command:
+
+```bash
+python pookalam.py
+```
+A Turtle graphics window will open, and the Pookalam design will be drawn automatically. You can click on the Turtle window to close it once the drawing is complete.
+
+## Customization
+** Colors: Modify the color scheme by changing the color values in the Turtle function calls.
+** Shapes: You can modify the patterns by adjusting the size, shape, and number of circles or triangles.
+** Text: The "Happy Onam" message can be customized in terms of font size, style, and position.
+** Execution Speed: You can adjust the drawing speed by modifying the speed() function.
+
+## Credits
+This project was created for the Code a Pookalam Contest by FOSS MEC. It was inspired by the traditional Pookalams designed during the Onam festival in Kerala.
+
+## License
+This project is licensed under the MIT License. Feel free to use and modify the code as per the license terms.
