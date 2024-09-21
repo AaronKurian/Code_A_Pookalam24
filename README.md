@@ -50,7 +50,7 @@ After installation, you can run the program by executing the following command:
 ```bash
 python AaronKurianAbraham_CS3A_MEC.py
 ```
-## Note:
+### Note:
 To view the entire content on the Turtle graphics screen, please maximize the window to full screen. This ensures that all patterns and designs are fully visible.
 A Turtle graphics window will open, and the Pookalam design will be drawn automatically. You can click on the Turtle window to close it once the drawing is complete.
 
