@@ -31,7 +31,7 @@ The Pookalam is a key part of the Onam celebrations in Kerala. This project uses
 To get started, first clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/AaronKurian/Pookalam24.git
+https://github.com/AaronKurian/AaronKurianAbraham_CS3A_MEC.git
 cd Pookalam24
 ```
 ### Install Requirements
