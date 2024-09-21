@@ -55,7 +55,7 @@ Note: If the requirements.txt file lists the turtle module, you may skip install
 After installation, you can run the program by executing the following command:
 
 ```bash
-python AaronKurianAbraham_CS3A_MEC.py
+python AaronKurianAbraham_2024_MEC.py
 ```
 ### Note:
 To view the entire content on the Turtle graphics screen, please **maximize** the window to full screen. This ensures that all patterns and designs are fully visible.
