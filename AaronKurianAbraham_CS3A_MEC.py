@@ -14,7 +14,7 @@ color("#d00000")
 write("Happy Onam!", font=("Courier", 50, "bold italic"))
 hideturtle()
 
-# Display name and clas
+# Display name and class
 speed(0)
 penup()
 goto(350, -300)
