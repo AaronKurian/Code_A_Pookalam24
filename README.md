@@ -20,6 +20,7 @@ The Pookalam is a key part of the Onam celebrations in Kerala. This project uses
 ## Video Demonstration
 
 Here is a short video showing the execution of the Pookalam design:
+
 https://github.com/user-attachments/assets/86213395-48b7-4a55-8a3f-94f8d0eaf3e2
 
 ## Features
