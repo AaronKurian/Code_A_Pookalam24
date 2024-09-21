@@ -11,7 +11,7 @@ penup()
 goto(-700, 320)
 pendown()
 color("#d00000")
-write("Happy Onam!", font=("Times New Roman", 50, "bold"))
+write("Happy Onam!", font=("Courier", 50, "bold italic"))
 hideturtle()
 
 # Display name and class
@@ -206,7 +206,7 @@ def model():
     trapeziumroof(points1, "#8d6b48", "#e8c9ab")
 
 
-###Call all the drawing functions###
+### Calling all the drawing functions ###
 
 designline()
 # Drawing border design
