@@ -32,7 +32,7 @@ To get started, first clone the repository to your local machine:
 
 ```bash
 https://github.com/AaronKurian/AaronKurianAbraham_CS3A_MEC.git
-cd Pookalam24
+cd AaronKurianAbraham_CS3A_MEC
 ```
 ### Install Requirements
 Make sure you have Python installed. If not, download it from Python.org.
@@ -48,7 +48,7 @@ Note: If the requirements.txt file lists the turtle module, you may skip install
 After installation, you can run the program by executing the following command:
 
 ```bash
-python pookalam.py
+python AaronKurianAbraham_CS3A_MEC.py
 ```
 A Turtle graphics window will open, and the Pookalam design will be drawn automatically. You can click on the Turtle window to close it once the drawing is complete.
 
