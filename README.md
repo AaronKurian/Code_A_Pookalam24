@@ -1,6 +1,6 @@
 # Pookalam Design using Python Turtle
 
-This project was created as part of the **Code a Pookalam Contest** organized by **FOSS MEC**. It is a Python program that uses the Turtle graphics library to draw a colorful Pookalam design, a traditional floral pattern associated with the Onam festival.
+This project was created as part of the **Code a Pookalam Contest** organized by **FOSS MEC** and **TINKERHUB MEC**. It is a Python program that uses the Turtle graphics library to draw a colorful Pookalam design, a traditional floral pattern associated with the Onam festival.
 
 ## Table of Contents
 
@@ -69,7 +69,7 @@ A Turtle graphics window will open, and the Pookalam design will be drawn automa
 -  Execution Speed: You can adjust the drawing speed by modifying the speed() function.
 
 ## Credits
-This project was created for the Code a Pookalam Contest by FOSS MEC. It was inspired by the traditional Pookalams designed during the Onam festival in Kerala.
+This project was created for the Code a Pookalam Contest by FOSS MEC and TINKERHUB MEC. It was inspired by the traditional Pookalams designed during the Onam festival in Kerala.
 
 ## License
 This project is licensed under the MIT License. Feel free to use and modify the code as per the license terms.
