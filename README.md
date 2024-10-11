@@ -38,7 +38,7 @@ https://github.com/user-attachments/assets/86213395-48b7-4a55-8a3f-94f8d0eaf3e2
 To get started, first clone the repository to your local machine:
 
 ```bash
-https://github.com/AaronKurian/Code_A_Pookalam24.git
+git clone https://github.com/AaronKurian/Code_A_Pookalam24.git
 cd Code_A_Pookalam24
 ```
 ### Install Requirements
