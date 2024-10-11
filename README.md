@@ -38,8 +38,8 @@ https://github.com/user-attachments/assets/86213395-48b7-4a55-8a3f-94f8d0eaf3e2
 To get started, first clone the repository to your local machine:
 
 ```bash
-https://github.com/AaronKurian/AaronKurianAbraham_CS3A_MEC.git
-cd AaronKurianAbraham_CS3A_MEC
+https://github.com/AaronKurian/Code_A_Pookalam24.git
+cd Code_A_Pookalam24
 ```
 ### Install Requirements
 Make sure you have Python installed. If not, download it from Python.org.
@@ -55,7 +55,7 @@ Note: If the requirements.txt file lists the turtle module, you may skip install
 After installation, you can run the program by executing the following command:
 
 ```bash
-python AaronKurianAbraham_2024_MEC.py
+python pookalam.py
 ```
 ### Note:
 To view the entire content on the Turtle graphics screen, please **maximize** the window to full screen. This ensures that all patterns and designs are fully visible.
