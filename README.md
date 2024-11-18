@@ -72,4 +72,6 @@ A Turtle graphics window will open, and the Pookalam design will be drawn automa
 This project was created for the Code a Pookalam Contest by FOSS MEC and TINKERHUB MEC. It was inspired by the traditional Pookalams designed during the Onam festival in Kerala.
 
 ## License
-This project is licensed under the MIT License. Feel free to use and modify the code as per the license terms.
+This project is licensed under the MIT License. Feel free to use and modify the code as per the [license](LICENSE)terms.
+
+Made With ❤️ by Aaron Kurian Abraham
